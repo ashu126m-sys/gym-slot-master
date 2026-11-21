@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Login | Gym Slot Master{% endblock %}
+
+{% block content %}
+
+<section class="auth-wrap">
+
+    <div class="auth-aside">
+        <div class="eyebrow">MEMBER ACCESS</div>
+        <h1>Welcome<br><span>back.</span></h1>
+        <p>Sign in to view your membership and reserve gym sessions. New accounts are created by the gym admin.</p>
+    </div>
+
+    <form class="form-card" method="POST">
+
+        <div class="eyebrow">SECURE LOGIN</div>
+        <h2>Log in</h2>
+
+        <label>
+            Username / Email
+            <input name="username" type="text"
+                   placeholder="Enter username or email" required>
+        </label>
+
+        <label>
+            Password
+            <input name="password" type="password"
+                   placeholder="Your password" required>
+        </label>
+
+        <div style="text-align:right; margin: -5px 0 18px;">
+            <a href="{{ url_for('forgot_password') }}"
+               style="color:#d4a843; text-decoration:none; font-size:14px;">
+                Forgot Password?
+            </a>
+        </div>
+
+        <button class="btn primary full" type="submit">
+            Log in ↗
+        </button>
+
+        <p class="hint">Need an account? Please contact the gym admin.</p>
+
+    </form>
+
+</section>
+
+{% endblock %}
